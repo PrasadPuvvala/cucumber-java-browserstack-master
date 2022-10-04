@@ -1,0 +1,21 @@
+{
+  "server": "hub.browserstack.com",
+  "user": "prasadpssnv_UntSi9",
+  "key": "yhPuy92dZ4VDPEyQP1Wg",
+
+  "capabilities": {
+    "bstack:options": {
+      "buildName": "cucumber-java-browserstack",
+      "debug": "true"
+    }
+  },
+
+  "environments": [
+    {
+      "browserName": "chrome"
+    },
+    {
+      "browserName": "firefox"
+    }
+  ]
+}

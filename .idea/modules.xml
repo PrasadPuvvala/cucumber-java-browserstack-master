@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/cucumber-java-browserstack-master/cucumber-java-browserstack.iml" filepath="$PROJECT_DIR$/cucumber-java-browserstack-master/cucumber-java-browserstack.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/cucumber-java-browserstack-master.iml" filepath="$PROJECT_DIR$/.idea/cucumber-java-browserstack-master.iml" />
+    </modules>
+  </component>
+</project>
