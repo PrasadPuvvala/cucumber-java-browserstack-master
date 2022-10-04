@@ -170,7 +170,7 @@ public class GenericFunctions
         }
 
 
-    }// checkNextQuestion- End function
+    }// checkNextQuestion- End function sample testing
 
 
-} // End of Class
+} // End of Class sample test
