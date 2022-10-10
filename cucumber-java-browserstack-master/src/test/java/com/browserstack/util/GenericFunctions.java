@@ -1,12 +1,9 @@
 package com.browserstack.util;
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.browserstack.stepdefs.StackDemoSteps;
+import com.browserstack.stepdefs.ExamCategoriesSteps;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.interactions.MoveTargetOutOfBoundsException;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 /*import pages.Home;
@@ -124,11 +121,11 @@ public class GenericFunctions
                         String text1 = driver.findElement(By.xpath("//*/app-question-box/div/div[2]/div[2]/div[" + counter + "]/label/span[3]")).getText();
                         String question = driver.findElement(By.xpath("//app-question-box/div/div[2]/div[1]/p")).getText();
                         if (text1.contains("incorrect!")) {
-                            StackDemoSteps.test.log(Status.FAIL, "Question is : " + "'" + question + "'");
-                            StackDemoSteps.test.log(Status.FAIL, "Answer : " + "'" + text + "'" + " is : " + "'" + text1 + "'");
+                            ExamCategoriesSteps.test.log(Status.FAIL, "Question is : " + "'" + question + "'");
+                            ExamCategoriesSteps.test.log(Status.FAIL, "Answer : " + "'" + text + "'" + " is : " + "'" + text1 + "'");
                         } else {
-                            StackDemoSteps.test.log(Status.PASS, "Question is : " + "'" + question + "'");
-                            StackDemoSteps.test.log(Status.PASS, "Answer : " + "'" + text + "'" + " is : " + "'" + text1 + "'");
+                            ExamCategoriesSteps.test.log(Status.PASS, "Question is : " + "'" + question + "'");
+                            ExamCategoriesSteps.test.log(Status.PASS, "Answer : " + "'" + text + "'" + " is : " + "'" + text1 + "'");
                         }
                     }
                     try
@@ -155,7 +152,7 @@ public class GenericFunctions
 
                     } catch (Exception e)
                     {
-                        StackDemoSteps.test.log(Status.INFO, new Throwable(e.getMessage()));
+                        ExamCategoriesSteps.test.log(Status.INFO, new Throwable(e.getMessage()));
                         return;
                         // break;
                     }
@@ -165,7 +162,7 @@ public class GenericFunctions
         } // Try
         catch (Exception e)
         {
-            StackDemoSteps.test.log(Status.INFO,new Throwable(e.getMessage()));
+            ExamCategoriesSteps.test.log(Status.INFO,new Throwable(e.getMessage()));
             return;
         }
 

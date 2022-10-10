@@ -1,21 +1,21 @@
 {
-  "server": "hub.browserstack.com",
-  "user": "prasadpssnv_UntSi9",
-  "key": "yhPuy92dZ4VDPEyQP1Wg",
+"server": "hub.browserstack.com",
+  "user": "gowthamikommula_sMQpkH",
+  "key": "EbdLEEnumknsAybz7x4U",
 
-  "capabilities": {
-    "bstack:options": {
-      "buildName": "cucumber-java-browserstack",
-      "debug": "true"
-    }
-  },
+"capabilities": {
+"bstack:options": {
+"buildName": "cucumber-java-browserstack",
+"debug": "true"
+}
+},
 
-  "environments": [
-    {
-      "browserName": "chrome"
-    },
-    {
-      "browserName": "firefox"
-    }
-  ]
+"environments": [
+{
+"browserName": "chrome"
+},
+{
+"browserName": "firefox"
+}
+]
 }
