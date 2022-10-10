@@ -24,6 +24,7 @@ import io.cucumber.testng.TestNGCucumberRunner;
 @CucumberOptions(
         features = {"src/test/resources/features/test"},
         glue = "com.browserstack.stepdefs",
+        tags= "@smoke",
         plugin = {
                 "pretty",
                 "html:reports/tests/cucumber/html",
