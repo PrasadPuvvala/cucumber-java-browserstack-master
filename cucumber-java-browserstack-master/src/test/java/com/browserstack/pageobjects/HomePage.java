@@ -23,6 +23,7 @@ public class HomePage {
 
     private By productCartText = By.xpath("//*[@id=\"__next\"]/div/div/div[2]/div[2]/div[2]/div/div[3]/p[1]");
 
+    private  By dashBoard= By.xpath("//app-header/div/div[1]/ul/li[1]/a");
     public void selectFirstProductName() {
         String firstProduct = webDriver.findElement(firstProductName).getText();
         setSelectedProductName(firstProduct);
@@ -36,6 +37,13 @@ public class HomePage {
         new WebDriverWait(webDriver,30).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(cartPane));
     }
 
+    public void waitForDashboard() {
+        new WebDriverWait(webDriver,30).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(dashBoard));
+    }
+
+    public void waitForXpath(WebDriver driver, String xpath) {
+        new WebDriverWait(driver,30).until(ExpectedConditions.visibilityOfAllElementsLocatedBy(By.xpath(xpath)));
+    }
     public String getProductCartText() {
         return webDriver.findElement(productCartText).getText();
     }
