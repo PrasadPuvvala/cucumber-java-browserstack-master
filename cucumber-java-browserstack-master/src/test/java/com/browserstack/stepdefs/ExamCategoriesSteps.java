@@ -41,17 +41,17 @@ public class ExamCategoriesSteps {
     public void setUp() {
 
 
-            driver = RunWebDriverCucumberTests.getManagedWebDriver().getWebDriver();
-         /*   ChromeOptions options = new ChromeOptions();
-            *//* disable notifications popup*//*
+        //    driver = RunWebDriverCucumberTests.getManagedWebDriver().getWebDriver();
+            ChromeOptions options = new ChromeOptions();
+             //disable notifications popup
             options.addArguments("--disable-notifications");
             WebDriverManager.chromedriver().setup();
             // System.setProperty("webdriver.chrome.driver", "E:\\Testing\\java-cucumber-testng-extentreport-master\\java-cucumber-testng-extentreport-master\\drivers\\chromedriver.exe");
             //something is happening that the next like is throwing an error
             driver = new ChromeDriver(options);
             driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);*/
-           /*Creating Object for HomPage Class*/
+            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+          // Creating Object for HomPage Class
             homePage = new HomePage(driver);
             this.extent = RunWebDriverCucumberTests.extent;
             this.test = RunWebDriverCucumberTests.test;
@@ -137,6 +137,8 @@ public class ExamCategoriesSteps {
         }
 
     }
+
+    /* Vocabulary Test*/
 
     @Then("Take Vocabulary Test")
     public void take_vocabulary_test() throws InterruptedException {
