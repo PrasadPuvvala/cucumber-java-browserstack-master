@@ -91,6 +91,8 @@ public class ExamCategoriesSteps {
         /*Handling intermediate window before get into Dashboard*/
     }
 
+    /*Taking Exams*/
+
     @When("^I take exams")
     public void I_take_exams() throws Throwable
     {
