@@ -139,6 +139,7 @@ public class ExamCategoriesSteps {
     }
 
     /* Vocabulary Test*/
+    /*Take Vocabulary Exam*/
 
     @Then("Take Vocabulary Test")
     public void take_vocabulary_test() throws InterruptedException {
