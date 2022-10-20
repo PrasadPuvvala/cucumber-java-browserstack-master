@@ -115,6 +115,7 @@ public class ExamCategoriesSteps {
             {
                 GenericFunctions.clickXpath(driver,"//app-dashboard/div[3]/div[3]/div/div/div[1]/div[3]/div/div");
             }*/
+            /*Scroll to Exam link*/
             GenericFunctions.scrollToElement(driver,"//app-dashboard/div[3]/div[5]/div/div[1]/div[1]/div[3]/div/div","xpath");
             String examName= driver.findElement(By.xpath("//app-dashboard/div[3]/div[5]/div/div["+i+"]/div/div[1]")).getText();
             test.log(Status.PASS,"EXAM CATEGORIES : "+"'"+examName.toUpperCase()+"'");
