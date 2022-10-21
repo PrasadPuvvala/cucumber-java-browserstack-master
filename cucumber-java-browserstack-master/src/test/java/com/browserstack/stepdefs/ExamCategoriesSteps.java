@@ -43,19 +43,19 @@ public class ExamCategoriesSteps {
         /* This is to create Instance of Chrome Driver*/
 
         //    driver = RunWebDriverCucumberTests.getManagedWebDriver().getWebDriver();
-            ChromeOptions options = new ChromeOptions();
-             //disable notifications popup
-            options.addArguments("--disable-notifications");
-            WebDriverManager.chromedriver().setup();
-            // System.setProperty("webdriver.chrome.driver", "E:\\Testing\\java-cucumber-testng-extentreport-master\\java-cucumber-testng-extentreport-master\\drivers\\chromedriver.exe");
-            //something is happening that the next like is throwing an error
-            driver = new ChromeDriver(options);
-            driver.manage().window().maximize();
-            driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-          // Creating Object for HomPage Class
-            homePage = new HomePage(driver);
-            this.extent = RunWebDriverCucumberTests.extent;
-            this.test = RunWebDriverCucumberTests.test;
+        ChromeOptions options = new ChromeOptions();
+        //disable notifications popup
+        options.addArguments("--disable-notifications");
+        WebDriverManager.chromedriver().setup();
+        // System.setProperty("webdriver.chrome.driver", "E:\\Testing\\java-cucumber-testng-extentreport-master\\java-cucumber-testng-extentreport-master\\drivers\\chromedriver.exe");
+        //something is happening that the next like is throwing an error
+        driver = new ChromeDriver(options);
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        // Creating Object for HomPage Class
+        homePage = new HomePage(driver);
+        this.extent = RunWebDriverCucumberTests.extent;
+        this.test = RunWebDriverCucumberTests.test;
 
     }
 
@@ -77,17 +77,17 @@ public class ExamCategoriesSteps {
         driver.findElement(By.xpath("//*/app-login/div/form/div/div[5]/button")).click();
         Thread.sleep(4000);
         /*Handling intermediate window before get into Dashboard*/
-       try
-       {
-           driver.navigate().refresh();
-           homePage.waitForXpath(driver,"//div[@class='cc_courses']");
-           GenericFunctions.scrollToElement(driver,"//app-enrollment/div/form/div/div/div[6]/div[1]","xpath");
-           GenericFunctions.clickXpath(driver,"//app-enrollment/div/form/div/div/div[6]/div[1]");
-       }
-       catch(Exception e)
-       {
+        try
+        {
+            driver.navigate().refresh();
+            homePage.waitForXpath(driver,"//div[@class='cc_courses']");
+            GenericFunctions.scrollToElement(driver,"//app-enrollment/div/form/div/div/div[6]/div[1]","xpath");
+            GenericFunctions.clickXpath(driver,"//app-enrollment/div/form/div/div/div[6]/div[1]");
+        }
+        catch(Exception e)
+        {
 
-       }
+        }
 
         /*Handling intermediate window before get into Dashboard*/
     }
@@ -107,10 +107,10 @@ public class ExamCategoriesSteps {
 
         for(int i=1;i<=1;i++)
         {
-           /* click on Dashboard */
+            /* click on Dashboard */
             homePage.waitForDashboard();
             GenericFunctions.clickXpath(driver,"//app-header/div/div[1]/ul/li[1]/a");
-          //  GenericFunctions.scrollToElement(driver,"//*[@id='examModule71']/div[1]/div[3]/div/div","xpath");
+            //  GenericFunctions.scrollToElement(driver,"//*[@id='examModule71']/div[1]/div[3]/div/div","xpath");
 /*
             if(i==1)
             {
@@ -129,7 +129,7 @@ public class ExamCategoriesSteps {
                   driver.findElement(By.xpath("//*[@id='examModule"+i+"']/div[1]/div[3]/div/div")).click();*/
 
             }
-           /* GenericFunctions.clickXpath(driver,"//*[@id='examModule"+i+"']/div[2]/div[2]/div[1]/a");*/
+            /* GenericFunctions.clickXpath(driver,"//*[@id='examModule"+i+"']/div[2]/div[2]/div[1]/a");*/
             /* Launch Practice Test*/
             GenericFunctions.clickXpath(driver,"//*/app-dashboard/div[3]/div[5]/div/div["+i+"]/div[2]/div[2]/div[1]/a");
             /* Start Practice Session*/
@@ -193,7 +193,7 @@ public class ExamCategoriesSteps {
             wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*/app-dashboard/div[3]/div[5]/div/div["+i+"]/div[2]/div[1]/div[1]/a")));
             GenericFunctions.clickXpath(driver,"//*/app-dashboard/div[3]/div[5]/div/div["+i+"]/div[2]/div[1]/div[1]/a");
             GenericFunctions.clickXpath(driver,"//button");
-           // String text ="//app-flashcard/div/div[1]/div/div/div[1]/div/div[2]/div/h2";
+            // String text ="//app-flashcard/div/div[1]/div/div/div[1]/div/div[2]/div/h2";
             homePage.waitForXpath(driver,"//app-flashcard/div/div[1]/div/div/div[1]/div/div[2]/div/h2");
             By firstProductName=null;
             try
@@ -223,7 +223,7 @@ public class ExamCategoriesSteps {
 
         test.log(Status.PASS,"page should");
 
-    Thread.sleep(5000);
+        Thread.sleep(5000);
     }
 
     @After
