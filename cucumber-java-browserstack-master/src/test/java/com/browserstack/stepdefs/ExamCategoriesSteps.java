@@ -42,7 +42,7 @@ public class ExamCategoriesSteps {
 
         /* This is to create Instance of Chrome Driver*/
 
-        //    driver = RunWebDriverCucumberTests.getManagedWebDriver().getWebDriver();
+        // driver = RunWebDriverCucumberTests.getManagedWebDriver().getWebDriver();
         ChromeOptions options = new ChromeOptions();
         //disable notifications popup
         options.addArguments("--disable-notifications");
@@ -61,6 +61,8 @@ public class ExamCategoriesSteps {
 
     @Given("^I login on the website '(.+)'$")
     public void I_login_on_the_website(String url) throws Throwable {
+        /*Launching CompuCram in Chrome Browser*/
+
         driver.get(url);
         Thread.sleep(2000);
         this.scenario= scenario;
