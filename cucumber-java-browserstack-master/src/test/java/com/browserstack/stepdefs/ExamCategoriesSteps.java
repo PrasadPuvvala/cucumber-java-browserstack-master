@@ -40,6 +40,7 @@ public class ExamCategoriesSteps {
     @Before
     public void setUp() {
 
+        /* This is to create Instance of Chrome Driver*/
 
         //    driver = RunWebDriverCucumberTests.getManagedWebDriver().getWebDriver();
             ChromeOptions options = new ChromeOptions();
